@@ -22,9 +22,11 @@ for sub_url in playlist.files:
 	file_download.download_file(base_url, sub_url, ts_file_name,folder_name)
 	if c == 15:
 		break
-file_size = file_merge.merge_files(folder_name)
 end_time = time.time()
+file_size = file_merge.merge_files(folder_name)
+merge_time = time.time()
 dload_time = end_time -start_time
 print(dload_time)
+print(merge_time-end_time)
 print(file_size)
 print(file_size/dload_time)

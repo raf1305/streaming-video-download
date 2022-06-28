@@ -9,14 +9,25 @@ files = []
 
 
 def merge_files(folder_name):
-	for i in os.listdir(f'{cwd}/{folder_name}'):
-		if i.endswith('.ts'):
-			files.append(i)
+	try:
+		for i in os.listdir(f'{cwd}/{folder_name}'):
+			if i.endswith('.ts') and i !='merged.ts':
+				files.append(i)
 
-	with open(f'{folder_name}/merged.ts', 'wb') as merged:
-		for i in files:
-			with open(f'{folder_name}/{i}', 'rb') as mergefile:
-				shutil.copyfileobj(mergefile, merged)
-	return Path(f'{folder_name}/merged.ts').stat().st_size / (1024 * 1024)
+		with open(f'{folder_name}/merged.ts', 'wb') as merged:
+			for i in files:
+				with open(f'{folder_name}/{i}', 'rb') as mergefile:
+					shutil.copyfileobj(mergefile, merged)
+		return Path(f'{folder_name}/merged.ts').stat().st_size / (1000 * 1000)
+	except Exception as e:
+		return repr(e)
+		
 	# to convert ts file to mp4 but takes long time
 	# subprocess.run(['ffmpeg', '-i', 'p/merged.ts', 'p/merged.mp4'])
+
+if __name__ == '__main__':
+	import sys
+	folder_name = sys.argv[1]
+	file_size = merge_files(folder_name)
+	print(file_size)
+	# print(folder_name)
