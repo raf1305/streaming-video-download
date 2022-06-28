@@ -6,7 +6,7 @@ import m3u8
 import file_download, file_merge, index_download, pattern_matching
 import time
 
-index_url = 'https://hoichoihlsns.akamaized.net/vhoichoiindia2/Renditions/20200626/1593178102447_tt_ep_01_bng/hls/1593178102447_tt_ep_01_bng_480.m3u8?hdntl=exp=1656475421~acl=/*~data=hdntl~hmac=585d20107ebc2813a20b7a72554aa7dcebd6a428e078b156e532d288623a443c'
+index_url = ''
 
 file_name = index_download.download_index_file(index_url)
 folder_name = file_name.split('.')[0]
@@ -45,12 +45,12 @@ for x in range(8):
 
 start_time = time.time()
 for sub_url in playlist.files:
-    c += 1
+    # c += 1
     # ts_file_name = pattern_matching.ts_file_name(sub_url)
     # file_download.download_file(base_url, sub_url, ts_file_name,folder_name)
     qu.put(sub_url)
-    if c == 15:
-        break
+    # if c == 15:
+    #     break
 qu.join()
 end_time = time.time()
 file_size = file_merge.merge_files(folder_name)

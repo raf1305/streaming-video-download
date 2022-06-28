@@ -9,6 +9,7 @@ html5lib = "*"
 requests = "*"
 m3u8 = {git = "https://github.com/globocom/m3u8.git"}
 ffmpeg-python = "*"
+natsort = "*"
 
 [dev-packages]
 

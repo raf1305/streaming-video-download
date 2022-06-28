@@ -3,14 +3,14 @@ import os
 import subprocess
 import ffmpeg
 from pathlib import Path
-
+from natsort import os_sorted
 cwd = os.getcwd()
 files = []
 
 
 def merge_files(folder_name):
 	try:
-		for i in os.listdir(f'{cwd}/{folder_name}'):
+		for i in os_sorted(os.listdir(f'{cwd}/{folder_name}')):
 			if i.endswith('.ts') and i !='merged.ts':
 				files.append(i)
 
@@ -30,4 +30,5 @@ if __name__ == '__main__':
 	folder_name = sys.argv[1]
 	file_size = merge_files(folder_name)
 	print(file_size)
-	# print(folder_name)
+	print(folder_name)
+	# subprocess.run(['ffmpeg', '-i', 'index-f2-v1-a1/merged.ts', 'index-f2-v1-a1/merged.mp4'])

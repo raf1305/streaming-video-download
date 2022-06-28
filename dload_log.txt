@@ -17,3 +17,31 @@ Download Time : 75.04823350906372
 Merge Time : 0.03291821479797363 
 File Size : 7.185924 
 AVG Dload 0.09575074140995127 MB/s
+
+ThreadQue Method
+
+Download Time : 12.038923978805542 
+Merge Time : 0.10072851181030273 
+File Size : 7.185924 
+AVG Dload 0.596890885983729 MB/s
+
+ThreadQue Method
+
+Download Time : 7.642547130584717 
+Merge Time : 0.09572291374206543 
+File Size : 10.534016 
+AVG Dload 1.3783383759380312 MB/s
+
+ThreadQue Method
+
+Download Time : 11.47632122039795 
+Merge Time : 1.1170063018798828 
+File Size : 9.516936 
+AVG Dload 0.8292671333636645 MB/s
+
+ThreadQue Method
+
+Download Time : 444.8979318141937 
+Merge Time : 34.96703028678894 
+File Size : 426.138848 
+AVG Dload 0.9578350842457316 MB/s
