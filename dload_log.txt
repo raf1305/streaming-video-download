@@ -1,0 +1,19 @@
+ThreadQue Method
+
+Download Time : 13.708318710327148 
+Merge Time : 0.10970616340637207 
+File Size : 7.185924 
+AVG Dload 0.5242017020356035 MB/s
+
+ThreadQue Method
+
+Download Time : 13.423096418380737 
+Merge Time : 0.0468752384185791 
+File Size : 7.185924 
+AVG Dload 0.5353402654666215 MB/s
+\Single Method
+
+Download Time : 75.04823350906372 
+Merge Time : 0.03291821479797363 
+File Size : 7.185924 
+AVG Dload 0.09575074140995127 MB/s
